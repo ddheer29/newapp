@@ -13,7 +13,18 @@ const SplashScreen = () => {
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>SplashScreen</Text>
+      <View>
+        <Text
+          style={{
+            textAlign: 'center',
+            fontSize: 14,
+            color: '#666',
+            marginTop: 10,
+            marginBottom: 10,
+            fontWeight: '500',
+          }}
+        >Connect people around the world for free</Text>
+      </View>
     </View>
   )
 }

@@ -3,8 +3,10 @@ import React from 'react'
 
 const NotificationScreen = () => {
   return (
-    <SafeAreaView>
-      <Text>NotificationScreen</Text>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>NotificationScreen</Text>
+      </View>
     </SafeAreaView>
 
   )

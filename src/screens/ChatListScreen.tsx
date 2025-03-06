@@ -6,6 +6,8 @@ import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Colors, isAndroid } from '../constants/Colors';
 import { useNavigation } from '@react-navigation/native';
+import SearchIcon from '../assets/svg/SearchIcon';
+import PenIcon from '../assets/svg/PenIcon';
 
 const ChatListScreen = () => {
   const navigation = useNavigation();
@@ -61,7 +63,7 @@ const ChatListScreen = () => {
         {/* search bar */}
         <View style={styles.searchbarcontainer}>
           <View style={styles.inputfieldContainer}>
-            <Icon name='search' size={24} color='#666' />
+            {isAndroid ? <SearchIcon /> : <Icon name='search' size={24} color='#666' />}
             <TextInput
               value={searchQuery}
               onChangeText={setSearchQuery}
@@ -70,7 +72,7 @@ const ChatListScreen = () => {
               cursorColor={Colors.primary}
             />
           </View>
-          <FontAwesome6 name='pen-to-square' size={24} color='#666' />
+          {isAndroid ? <PenIcon /> : <FontAwesome6 name='pen-to-square' size={24} color='#666' />}
         </View>
 
         {/* chat list */}
@@ -112,6 +114,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center'
   },
   inputfieldContainer: {
     flexDirection: 'row',

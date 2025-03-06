@@ -8,6 +8,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import chatData from '../data/chatData.json';
 import { Colors, isAndroid } from '../constants/Colors';
 import { KeyboardAvoidingView, ScrollView } from 'react-native'
+import BackArrow from '../assets/svg/BackArrow';
+import VideoCamera from '../assets/svg/VideoCamera';
+import PhoneCall from '../assets/svg/PhoneCall';
 
 interface ChatSpecificScreenProps {
   profileImg: string;
@@ -146,7 +149,7 @@ const ChatSpecificScreen = () => {
               gap: 20
             }}>
               <TouchableOpacity onPress={handleGoBack}>
-                <FontAwesome6 name='arrow-left-long' size={18} color='#333' />
+                {isAndroid ? <BackArrow /> : <FontAwesome6 name='arrow-left-long' size={18} color='#333' />}
               </TouchableOpacity>
               <Image source={{ uri: userData.profileImg }} style={{ width: 50, height: 50, borderRadius: 100 }} />
               <View>
@@ -156,8 +159,8 @@ const ChatSpecificScreen = () => {
             </View>
 
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: 20 }}>
-              <Feather name='video' size={24} color='#666' />
-              <Feather name='phone' size={24} color='#666' />
+              {isAndroid ? <VideoCamera /> : <Feather name='video' size={24} color='#666' />}
+              {isAndroid ? <PhoneCall /> : <Feather name='phone' size={24} color='#666' />}
             </View>
           </View>
 

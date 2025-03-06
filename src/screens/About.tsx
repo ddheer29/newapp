@@ -3,8 +3,10 @@ import React from 'react'
 
 const About = () => {
   return (
-    <SafeAreaView>
-      <Text>About</Text>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>About</Text>
+      </View>
     </SafeAreaView>
   )
 }
