@@ -4,7 +4,7 @@ import chatListData from '../data/chatListData';
 import Icon from 'react-native-vector-icons/Feather';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { Colors } from '../constants/Colors';
+import { Colors, isAndroid } from '../constants/Colors';
 import { useNavigation } from '@react-navigation/native';
 
 const ChatListScreen = () => {
@@ -43,7 +43,7 @@ const ChatListScreen = () => {
           <Text>{item.time}</Text>
           {item.unreadMessages > 0 && (
             <View style={{ backgroundColor: Colors.primary, borderRadius: 100, width: 21, height: 21, alignItems: 'center', justifyContent: 'center' }}>
-              <Text style={{ color: '#fff', fontSize: 12 }}>{index}</Text>
+              <Text style={{ color: '#fff', fontSize: 12 }}>{item.unreadMessages}</Text>
             </View>
           )}
         </View>
@@ -53,6 +53,7 @@ const ChatListScreen = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      {isAndroid && <View style={{ height: 50 }} />}
       <View style={{
         flex: 1,
         paddingHorizontal: 26,

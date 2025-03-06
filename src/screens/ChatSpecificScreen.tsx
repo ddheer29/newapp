@@ -6,7 +6,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import chatData from '../data/chatData.json';
-import { Colors } from '../constants/Colors';
+import { Colors, isAndroid } from '../constants/Colors';
 import { KeyboardAvoidingView, ScrollView } from 'react-native'
 
 interface ChatSpecificScreenProps {
@@ -54,14 +54,20 @@ const ChatSpecificScreen = () => {
     return (
       <View style={{}}>
         <View style={[styles.messageContainer, item.sender === "me" ? styles.myMessage : styles.otherMessage]}>
-          {
-            item.image_url && (
-              <Image
-                source={{ uri: item.image_url }}
-                style={{ width: "80%", height: 200, borderRadius: 10, marginBottom: 10 }}
-              />
-            )
-          }
+          {item.image_url && typeof item.image_url === 'string' && (
+            <Image
+              source={{ uri: item?.image_url }}
+              style={{
+                width: 220,
+                height: 140,
+                borderRadius: 20,
+                marginBottom: 10,
+                alignSelf: item.sender === "me" ? 'flex-start' : 'flex-end'
+              }}
+            // resizeMode='contain'
+            />
+          )}
+
           <Text style={item.sender === "me" ? styles.mymessageText : styles.senderMessageText}>{item.message}</Text>
         </View>
         <View style={{ flexDirection: 'row', justifyContent: item.sender === "me" ? 'flex-end' : 'flex-start', gap: 8 }}>
@@ -114,10 +120,11 @@ const ChatSpecificScreen = () => {
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
       <StatusBar barStyle='dark-content' backgroundColor='#fff' />
 
+      {isAndroid && <View style={{ height: 50 }} />}
       <KeyboardAvoidingView
         style={{ flex: 1 }}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        keyboardVerticalOffset={Platform.OS === "ios" ? -10 : 0} // Adjust offset as needed
+        keyboardVerticalOffset={Platform.OS === "ios" ? -10 : -10} // Adjust offset as needed
       >
         <View style={{ flex: 1, backgroundColor: '#f9f9f9' }}>
           {/* Header */}
@@ -211,21 +218,23 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     marginVertical: 5,
     maxWidth: '80%',
-    paddingHorizontal: 18
+    paddingHorizontal: 18,
+    paddingVertical: 16,
   },
   myMessage: {
     alignSelf: 'flex-end',
     backgroundColor: Colors.primary,
-    borderTopLeftRadius: 16,
-    borderBottomRightRadius: 16,
-    borderBottomLeftRadius: 16,
+    borderTopLeftRadius: 20,
+    // borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    borderTopRightRadius: 20,
   },
   otherMessage: {
     alignSelf: 'flex-start',
     backgroundColor: '#fff',
-    borderTopRightRadius: 16,
-    borderBottomLeftRadius: 16,
-    borderBottomRightRadius: 16,
+    borderTopRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
   },
   messageSender: {
     fontWeight: 'bold',

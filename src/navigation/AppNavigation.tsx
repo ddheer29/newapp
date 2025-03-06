@@ -32,10 +32,10 @@ const AppNavigation = () => {
           headerShown: false,
           tabBarHideOnKeyboard: true,
           tabBarStyle: {
-            paddingTop: Platform.OS === 'ios' ? RFValue(8) : 0,
+            paddingTop: Platform.OS === 'ios' ? RFValue(8) : RFValue(12),
             paddingBottom: Platform.OS === 'ios' ? 20 : 10,
             // backgroundColor: 'transparent',
-            height: Platform.OS === 'android' ? 70 : 90,
+            height: Platform.OS === 'android' ? 90 : 90,
             borderTopWidth: 0,
             position: 'absolute',
             borderTopLeftRadius: 20,
