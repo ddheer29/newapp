@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/pic1.avif",
+      "sha1": "e1a2e8b52877e5cc27b2b0d746a0aaab900e0e18"
+    },
+    {
+      "path": "src/assets/pic2.jpg",
+      "sha1": "7fae986e5c352a690ddd1b8fc4c88045ca7a1c97"
+    },
+    {
+      "path": "src/assets/pic3.jpg",
+      "sha1": "5884b351c2c07b04e8d7b678c8c996a9db1c2800"
+    },
+    {
+      "path": "src/assets/pic4.jpg",
+      "sha1": "9e24876992552d153c18a5a23acf8d62e73d7bb2"
+    }
+  ]
+}

@@ -1,13 +1,15 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import AppNavigation from './src/navigation/AppNavigation'
 
-const App = () => {
+const NotificationScreen = () => {
   return (
-    <AppNavigation />
+    <SafeAreaView>
+      <Text>NotificationScreen</Text>
+    </SafeAreaView>
+
   )
 }
 
-export default App
+export default NotificationScreen
 
 const styles = StyleSheet.create({})

@@ -1,0 +1,61 @@
+[
+  {
+    "sender": "me",
+    "message": "Hey there! How's your day going? 😄",
+    "timestamp": "2025-03-05T10:30:00Z"
+  },
+  {
+    "sender": "other",
+    "message": "Hi! Doing great. Just brainstorming some design ideas. 🎨",
+    "timestamp": "2025-03-05T10:31:15Z"
+  },
+  {
+    "sender": "me",
+    "message": "Cool! I'm working on a chat app UI. Need some inspiration.",
+    "timestamp": "2025-03-05T10:32:45Z"
+  },
+  {
+    "sender": "other",
+    "message": "Check out this workspace concept!",
+    "image_url": "https://i.pinimg.com/736x/9d/0b/0b/9d0b0bff7437313ec9ebbed08b626e8b.jpg",
+    "timestamp": "2025-03-05T10:35:30Z"
+  },
+  {
+    "sender": "me",
+    "message": "Wow, that's a perfect design environment! 🖥️",
+    "timestamp": "2025-03-05T10:36:55Z"
+  },
+  {
+    "sender": "other",
+    "message": "I found some UI design inspiration for you.",
+    "image_url": "https://i.pinimg.com/736x/9d/0b/0b/9d0b0bff7437313ec9ebbed08b626e8b.jpg",
+    "timestamp": "2025-03-05T10:40:10Z"
+  },
+  {
+    "sender": "me",
+    "message": "These color schemes are inspiring! 🌈",
+    "image_url": "https://i.pinimg.com/736x/9d/0b/0b/9d0b0bff7437313ec9ebbed08b626e8b.jpg",
+    "timestamp": "2025-03-05T10:42:30Z"
+  },
+  {
+    "sender": "other",
+    "message": "Love the minimalist design you shared! 👍",
+    "timestamp": "2025-03-05T10:44:45Z"
+  },
+  {
+    "sender": "me",
+    "message": "Thanks! Want to collaborate on the UI? 🤝",
+    "timestamp": "2025-03-05T10:46:20Z"
+  },
+  {
+    "sender": "other",
+    "message": "Absolutely! Here's another design concept.",
+    "image_url": "https://i.pinimg.com/736x/9d/0b/0b/9d0b0bff7437313ec9ebbed08b626e8b.jpg",
+    "timestamp": "2025-03-05T10:48:05Z"
+  },
+  {
+    "sender": "me",
+    "message": "This is exactly the kind of layout I was looking for! 🚀",
+    "timestamp": "2025-03-05T10:49:30Z"
+  }
+]

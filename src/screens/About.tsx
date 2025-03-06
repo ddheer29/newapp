@@ -1,13 +1,14 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import AppNavigation from './src/navigation/AppNavigation'
 
-const App = () => {
+const About = () => {
   return (
-    <AppNavigation />
+    <SafeAreaView>
+      <Text>About</Text>
+    </SafeAreaView>
   )
 }
 
-export default App
+export default About
 
 const styles = StyleSheet.create({})
